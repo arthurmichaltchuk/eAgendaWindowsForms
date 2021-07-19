@@ -60,6 +60,7 @@ namespace eAgenda.WindowsFormsApp
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabCompromissos = new System.Windows.Forms.TabPage();
+            this.labelFiltro = new System.Windows.Forms.Label();
             this.dtFim = new System.Windows.Forms.MaskedTextBox();
             this.dtInicio = new System.Windows.Forms.MaskedTextBox();
             this.dtFiltroFim = new System.Windows.Forms.DateTimePicker();
@@ -85,7 +86,6 @@ namespace eAgenda.WindowsFormsApp
             this.labelFooter = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnGravar = new System.Windows.Forms.Button();
             this.bntConcluido = new System.Windows.Forms.Button();
-            this.labelFiltro = new System.Windows.Forms.Label();
             this.tcMenu.SuspendLayout();
             this.tabTarefas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTarefa)).BeginInit();
@@ -103,6 +103,9 @@ namespace eAgenda.WindowsFormsApp
             // 
             // tcMenu
             // 
+            this.tcMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tcMenu.Controls.Add(this.tabTarefas);
             this.tcMenu.Controls.Add(this.tabContatos);
             this.tcMenu.Controls.Add(this.tabCompromissos);
@@ -152,6 +155,7 @@ namespace eAgenda.WindowsFormsApp
             // 
             // MudarTabela
             // 
+            this.MudarTabela.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MudarTabela.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MudarTabela.ForeColor = System.Drawing.Color.Black;
             this.MudarTabela.Location = new System.Drawing.Point(485, 146);
@@ -168,6 +172,9 @@ namespace eAgenda.WindowsFormsApp
             this.dataGridTarefa.AllowUserToDeleteRows = false;
             this.dataGridTarefa.AllowUserToResizeColumns = false;
             this.dataGridTarefa.AllowUserToResizeRows = false;
+            this.dataGridTarefa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridTarefa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridTarefa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridTarefa.Location = new System.Drawing.Point(33, 187);
@@ -229,6 +236,8 @@ namespace eAgenda.WindowsFormsApp
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(34, 123);
             this.pictureBox2.Name = "pictureBox2";
@@ -317,6 +326,9 @@ namespace eAgenda.WindowsFormsApp
             this.dataGridContato.AllowUserToDeleteRows = false;
             this.dataGridContato.AllowUserToResizeColumns = false;
             this.dataGridContato.AllowUserToResizeRows = false;
+            this.dataGridContato.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridContato.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridContato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridContato.Location = new System.Drawing.Point(33, 187);
@@ -362,9 +374,9 @@ namespace eAgenda.WindowsFormsApp
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(129, 80);
+            this.txtEmail.Location = new System.Drawing.Point(124, 80);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(306, 28);
+            this.txtEmail.Size = new System.Drawing.Size(311, 28);
             this.txtEmail.TabIndex = 28;
             // 
             // txtTelefone
@@ -388,6 +400,8 @@ namespace eAgenda.WindowsFormsApp
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(34, 123);
             this.pictureBox3.Name = "pictureBox3";
@@ -473,6 +487,18 @@ namespace eAgenda.WindowsFormsApp
             this.tabCompromissos.Text = "Compromissos";
             this.tabCompromissos.UseVisualStyleBackColor = true;
             // 
+            // labelFiltro
+            // 
+            this.labelFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFiltro.AutoSize = true;
+            this.labelFiltro.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.labelFiltro.Location = new System.Drawing.Point(512, 150);
+            this.labelFiltro.Name = "labelFiltro";
+            this.labelFiltro.Size = new System.Drawing.Size(36, 21);
+            this.labelFiltro.TabIndex = 55;
+            this.labelFiltro.Text = "Até";
+            this.labelFiltro.Visible = false;
+            // 
             // dtFim
             // 
             this.dtFim.Font = new System.Drawing.Font("Tahoma", 10.2F);
@@ -495,6 +521,7 @@ namespace eAgenda.WindowsFormsApp
             // 
             // dtFiltroFim
             // 
+            this.dtFiltroFim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtFiltroFim.Font = new System.Drawing.Font("Tahoma", 10.2F);
             this.dtFiltroFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFiltroFim.Location = new System.Drawing.Point(566, 146);
@@ -505,6 +532,7 @@ namespace eAgenda.WindowsFormsApp
             // 
             // dtFiltroInicio
             // 
+            this.dtFiltroInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtFiltroInicio.Font = new System.Drawing.Font("Tahoma", 10.2F);
             this.dtFiltroInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFiltroInicio.Location = new System.Drawing.Point(383, 146);
@@ -515,9 +543,10 @@ namespace eAgenda.WindowsFormsApp
             // 
             // MudarTabelaCompromissos
             // 
+            this.MudarTabelaCompromissos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MudarTabelaCompromissos.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MudarTabelaCompromissos.ForeColor = System.Drawing.Color.Black;
-            this.MudarTabelaCompromissos.Location = new System.Drawing.Point(692, 145);
+            this.MudarTabelaCompromissos.Location = new System.Drawing.Point(696, 145);
             this.MudarTabelaCompromissos.Name = "MudarTabelaCompromissos";
             this.MudarTabelaCompromissos.Size = new System.Drawing.Size(227, 31);
             this.MudarTabelaCompromissos.TabIndex = 50;
@@ -531,6 +560,9 @@ namespace eAgenda.WindowsFormsApp
             this.dataGridCompromisso.AllowUserToDeleteRows = false;
             this.dataGridCompromisso.AllowUserToResizeColumns = false;
             this.dataGridCompromisso.AllowUserToResizeRows = false;
+            this.dataGridCompromisso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridCompromisso.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridCompromisso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCompromisso.Location = new System.Drawing.Point(33, 187);
@@ -605,6 +637,8 @@ namespace eAgenda.WindowsFormsApp
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(34, 123);
             this.pictureBox4.Name = "pictureBox4";
@@ -673,6 +707,8 @@ namespace eAgenda.WindowsFormsApp
             // 
             // btnEditar
             // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditar.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.Silver;
             this.btnEditar.Location = new System.Drawing.Point(354, 544);
@@ -686,7 +722,7 @@ namespace eAgenda.WindowsFormsApp
             // btnExcluir
             // 
             this.btnExcluir.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.ForeColor = System.Drawing.Color.Black;
+            this.btnExcluir.ForeColor = System.Drawing.Color.Silver;
             this.btnExcluir.Location = new System.Drawing.Point(688, 544);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(280, 70);
@@ -715,6 +751,7 @@ namespace eAgenda.WindowsFormsApp
             // 
             // btnGravar
             // 
+            this.btnGravar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnGravar.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGravar.ForeColor = System.Drawing.Color.Black;
             this.btnGravar.Location = new System.Drawing.Point(12, 544);
@@ -727,6 +764,7 @@ namespace eAgenda.WindowsFormsApp
             // 
             // bntConcluido
             // 
+            this.bntConcluido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bntConcluido.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntConcluido.ForeColor = System.Drawing.Color.Black;
             this.bntConcluido.Location = new System.Drawing.Point(12, 544);
@@ -737,17 +775,6 @@ namespace eAgenda.WindowsFormsApp
             this.bntConcluido.UseVisualStyleBackColor = true;
             this.bntConcluido.Visible = false;
             this.bntConcluido.Click += new System.EventHandler(this.bntConcluido_Click);
-            // 
-            // labelFiltro
-            // 
-            this.labelFiltro.AutoSize = true;
-            this.labelFiltro.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.labelFiltro.Location = new System.Drawing.Point(512, 150);
-            this.labelFiltro.Name = "labelFiltro";
-            this.labelFiltro.Size = new System.Drawing.Size(36, 21);
-            this.labelFiltro.TabIndex = 55;
-            this.labelFiltro.Text = "Até";
-            this.labelFiltro.Visible = false;
             // 
             // Form1
             // 

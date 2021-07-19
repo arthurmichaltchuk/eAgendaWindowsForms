@@ -32,7 +32,6 @@ namespace eAgenda.WindowsFormsApp
             //TAREFAS
             alimentarPrioridade();
             gerarTabelaTarefasPendentes();
-
             MudarTabelaTarefa();
 
             //CONTATOS
@@ -131,9 +130,11 @@ namespace eAgenda.WindowsFormsApp
                 if (dataGridTarefa.SelectedRows.Count > 1)
                 {
                     btnEditar.ForeColor = Color.Silver;
+                    btnExcluir.ForeColor = Color.Silver;
                 }
                 else if (dataGridTarefa.SelectedRows.Count == 0)
                 {
+                    btnExcluir.ForeColor = Color.Silver;
                     btnEditar.ForeColor = Color.Silver;
                 }
                 else if (dataGridTarefa.SelectedCells.Count > 1)
@@ -142,6 +143,7 @@ namespace eAgenda.WindowsFormsApp
                     DataGridViewRow selectedRow = dataGridTarefa.Rows[selectedrowindex];
                     id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
 
+                    btnExcluir.ForeColor = Color.Black;
                     btnEditar.ForeColor = Color.Black;
                 }                
             }
@@ -154,10 +156,12 @@ namespace eAgenda.WindowsFormsApp
                 if (dataGridContato.SelectedRows.Count > 1)
                 {
                     btnEditar.ForeColor = Color.Silver;
+                    btnExcluir.ForeColor = Color.Silver;
                 }
                 else if (dataGridContato.SelectedRows.Count == 0)
                 {
                     btnEditar.ForeColor = Color.Silver;
+                    btnExcluir.ForeColor = Color.Silver;
                 }
                 else if (dataGridContato.SelectedCells.Count > 1)
                 {
@@ -166,6 +170,7 @@ namespace eAgenda.WindowsFormsApp
                     id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
 
                     btnEditar.ForeColor = Color.Black;
+                    btnExcluir.ForeColor = Color.Black;
                 }
             }
         }
@@ -177,10 +182,12 @@ namespace eAgenda.WindowsFormsApp
                 if (dataGridCompromisso.SelectedRows.Count > 1)
                 {
                     btnEditar.ForeColor = Color.Silver;
+                    btnExcluir.ForeColor = Color.Silver;
                 }
                 else if (dataGridCompromisso.SelectedRows.Count == 0)
                 {
                     btnEditar.ForeColor = Color.Silver;
+                    btnExcluir.ForeColor = Color.Silver;
                 }
                 else if (dataGridCompromisso.SelectedCells.Count > 1)
                 {
@@ -189,6 +196,7 @@ namespace eAgenda.WindowsFormsApp
                     id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
 
                     btnEditar.ForeColor = Color.Black;
+                    btnExcluir.ForeColor = Color.Black;
                 }
             }
         }
@@ -295,7 +303,7 @@ namespace eAgenda.WindowsFormsApp
                 }
                 else if (btnEditar.ForeColor == Color.Black)
                 {
-                    DTCriacao.Visible = false;
+                    DTCriacao.Enabled = false;
                     labelDataCriacao.ForeColor = Color.Silver;
                     btnExcluir.ForeColor = Color.Silver;
                     labelPConcluido.Visible = true;
@@ -587,7 +595,7 @@ namespace eAgenda.WindowsFormsApp
             bntConcluido.Visible = false;
             btnExcluir.ForeColor = Color.Black;
 
-            DTCriacao.Visible = true;
+            DTCriacao.Enabled = true;
             labelDataCriacao.ForeColor = Color.Black;
         }
 
@@ -662,10 +670,18 @@ namespace eAgenda.WindowsFormsApp
 
             //foreach (var item in compromissos)
             //{
-            //    = item.Contato.Nome;
-                
-            //}
+            //    DataRow registro = CompromissosDT.NewRow();
 
+            //    registro["ID"] = item.Id;
+            //    registro["Assunto"] = item.Assunto;
+            //    registro["Local ou Link"] = item.Local;
+            //    registro["Data"] = item.Data;
+            //    registro["Hora de início"] = item.HoraInicio;
+            //    registro["Hora de Término"] = item.HoraTermino;
+            //    registro["Contato"] = item.Contato.Nome;
+
+            //    CompromissosDT.Rows.Add(registro);
+            //}
 
             dataGridCompromisso.DataSource = compromissos;
         }
